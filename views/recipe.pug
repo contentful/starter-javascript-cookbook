@@ -3,7 +3,8 @@ extends layout
 block content
   h1= recipe.fields.title
   p= recipe.fields.description
-  img(src='#{image}' alt=altText width="100")
+  - var imageSrc = image
+  img(src=imageSrc alt=altText width="100")
   h2 Ingredients
   != ingredients
   h2 Instructions
