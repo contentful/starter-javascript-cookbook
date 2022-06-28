@@ -2,11 +2,15 @@ extends layout
 
 block content
   h1= recipe.fields.title
-  p= recipe.fields.description
+  p.subtitle= recipe.fields.description
   - var imageSrc = image
-  img(src=imageSrc alt=altText width="100")
-  h2 Ingredients
-  != ingredients
-  h2 Instructions
-  != instructions
+  div.cover
+    img(src=imageSrc alt=altText width="300")
+  div.recipe
+    div
+      h2 Ingredients
+      != ingredients
+    div
+      h2 Instructions
+      != instructions
 

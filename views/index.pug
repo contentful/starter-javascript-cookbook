@@ -2,11 +2,14 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p.subtitle Find your favourite Vegetarian recipe!
   
   .recipesList
-    p Amazing!
     ul
       each recipe in recipes
         li
-          a(href='/recipe/'+ recipe.fields.slug)= recipe.fields.title
+          - var imgSrc = recipe.fields.images[0].fields.file.url
+          - var altText = recipe.fields.images[0].fields.description
+          a(href='/recipe/'+ recipe.fields.slug)
+            img(src=imgSrc alt=altText width="300")
+            h4= recipe.fields.title

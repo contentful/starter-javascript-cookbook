@@ -1,8 +1,126 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+@import url('https://unpkg.com/@contentful/f36-tokens@4.0.1/dist/css/index.css');
+@import url('https://www.contentful.com/fonts.css');
+
+html {
+  font-size: 100%;
 }
 
 a {
-  color: #00b7ff;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 32px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Avenir Next W01';
+  margin: 0;
+  color: black;
+  background: url('../images/background.png');
+  background-size: contain;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  font-size: var(--font-size-l);
+}
+
+small {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
+  display: block;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: fit-content;
+  margin: 24px;
+  padding: 12px 12px 0 12px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: larger;
+}
+
+.recipesList > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding-inline-start: 0;
+}
+
+.recipesList > ul > li {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 8px 7px 4px 2px #e1d6d65e;
+}
+
+.recipesList > ul > li > a > img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.recipesList > ul > li > a > h4 {
+  text-align: center;
+}
+
+.cover {
+  text-align: center;
+}
+
+.cover img {
+  border: 16px solid white;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+}
+
+.recipe div {
+  min-width: 400px;
 }

@@ -13,7 +13,7 @@ router.get('/:slug', async function (req, res, next) {
     const ingredients = renderRichText(recipe[0].fields.ingredients)
     const instructions = renderRichText(recipe[0].fields.instructions)
     res.render('recipe', {
-      title: 'Recipe',
+      title: recipe[0].fields.title + ' - Vegetarian Cookbook',
       recipe: recipe[0],
       ingredients: ingredients,
       instructions: instructions,
