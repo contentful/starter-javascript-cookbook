@@ -3,6 +3,8 @@
 
 html {
   font-size: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 a {
@@ -24,6 +26,7 @@ body {
   color: black;
   background: url('../images/background.png');
   background-size: contain;
+  margin-bottom: 64px;
 }
 
 h1,
@@ -123,4 +126,21 @@ small {
 
 .recipe div {
   min-width: 400px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 6px 0 6px 0;
+  height: 52px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 12px;
 }
