@@ -6,7 +6,7 @@ Create a JavaScript cookbook powered by [Contentful](https://www.contentful.com/
 
 [https://javascript-contentful-starter.herokuapp.com/](https://javascript-contentful-starter.herokuapp.com/)
 
-![The homepage of the cookbook website](./docs/homepage.png "The homepage of the cookbook website")
+![The homepage of the cookbook website](./docs/homepage.png 'The homepage of the cookbook website')
 
 ## Features
 
@@ -80,8 +80,8 @@ Next, go to **Settings > API keys > Content management tokens** and create a new
 
 With the space ID and management access token at hand run the following command:
 
-```
-CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=YOUR_MANAGEMENT_TOKEN npm run setup
+```bash
+CONTENTFUL_SPACE_ID=XXX CONTENTFUL_MANAGEMENT_TOKEN=XXX CONTENTFUL_DELIVERY_TOKEN=XXX npm run setup
 ```
 
 This command will create the needed content structures and set up your Contentful space ready to use. The output should look as follows:
@@ -132,10 +132,10 @@ From your contentful space, go to **Content model** and add a new content type:
 Once the content model is saved, add these fields (you don't have to modify the settings unless specified):
 
 - `Name` - **Text** field (type **short text**).
-- `Quantity Type` - **Text** field (type **short text**). 
-    - Click on **Create and configure**. 
-    - Under **Validation**, check ***Accept only specifed values*** and enter a few values.
-    - You can optionally go to **Appearance** and select **Dropdown**.
+- `Quantity Type` - **Text** field (type **short text**).
+  - Click on **Create and configure**.
+  - Under **Validation**, check **_Accept only specifed values_** and enter a few values.
+  - You can optionally go to **Appearance** and select **Dropdown**.
 
 Save the content type and continue.
 
@@ -150,7 +150,7 @@ Next, add these fields (you don't have to modify the settings unless specified):
 - `Title` - **Text** field (type **short text**)
 - `Description` - **Text** field (type **short text**)
 - `Ingredients` - **Rich Text**
-    - Go to **Validation** > **Embedded inline entry** > Select **Accept only specifed entry type** > Select **Ingredient**.
+  - Go to **Validation** > **Embedded inline entry** > Select **Accept only specifed entry type** > Select **Ingredient**.
 - `Instructions` - **Rich Text** field
 - `Images` - **Media** field (type **many files**)
 - `slug` - **Text** field. You can optionally go to the settings of this field, and under **Appearance**, select **Slug** to display it as a slug of the `title` field.
@@ -174,7 +174,7 @@ Go to the **Content** section in your space, then click on **Add entry** and sel
 Next, create another entry with the content type **Post**:
 
 - We recommend creating at least **2 recipe entries**.
-- In the **Ingredient** field, refer the ingredients: Click on **+ Embed** >  **Inline entry** > Select the ingredient
+- In the **Ingredient** field, refer the ingredients: Click on **+ Embed** > **Inline entry** > Select the ingredient
 - For images, you can download them from [Unsplash](https://unsplash.com/).
 
 **Important:** For each entry and asset, you need to click on **Publish**. If not, the entry will be in draft state.
@@ -191,7 +191,7 @@ Next, copy the `.env.example` file in this directory to `.env` (which will be ig
 cp .env.example .env
 ```
 
-Then set each variable on `.env.local`:
+Then set each variable on `.env`:
 
 - `CONTENTFUL_SPACE_ID` should be the **Space ID** field of your API Key
 - `CONTENTFUL_ACCESS_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) - access token** field of your API key
@@ -217,3 +217,10 @@ yarn dev
 
 Your app should be up and running on [http://localhost:3000](http://localhost:3000)!
 
+# Deploy
+
+Use the Deploy button below, to deploy the project on Heroku.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+**NOTE:** You'll have to configure the ***CONTENTFUL_SPACE_ID*** and ***CONTENTFUL_ACCESS_TOKEN*** values.

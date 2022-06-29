@@ -1,0 +1,14 @@
+{
+  "name": "starter-javascript-cookbook",
+  "description": "Contentful JavaScript Cookbook Starter",
+  "repository": "https://github.com/contentful/starter-javascript-cookbook",
+  "keywords": ["javascript", "contentful", "starter"],
+  "env":{
+    "CONTENTFUL_SPACE_ID":{
+        "description": "Your Contentful Space ID"
+    },
+    "CONTENTFUL_ACCESS_TOKEN":{
+        "description": "Your Contentful Delivery API Access Token"
+    }
+  }
+}
