@@ -15,6 +15,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
+    "start": "start ./bin/www",
     "setup": "node ./contentful/setup.js"
   },
   "dependencies": {
