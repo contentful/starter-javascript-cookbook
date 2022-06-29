@@ -80,8 +80,8 @@ Next, go to **Settings > API keys > Content management tokens** and create a new
 
 With the space ID and management access token at hand run the following command:
 
-```
-CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=YOUR_MANAGEMENT_TOKEN npm run setup
+```bash
+CONTENTFUL_SPACE_ID=XXX CONTENTFUL_MANAGEMENT_TOKEN=XXX CONTENTFUL_DELIVERY_TOKEN=XXX npm run setup
 ```
 
 This command will create the needed content structures and set up your Contentful space ready to use. The output should look as follows:
@@ -191,7 +191,7 @@ Next, copy the `.env.example` file in this directory to `.env` (which will be ig
 cp .env.example .env
 ```
 
-Then set each variable on `.env.local`:
+Then set each variable on `.env`:
 
 - `CONTENTFUL_SPACE_ID` should be the **Space ID** field of your API Key
 - `CONTENTFUL_ACCESS_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) - access token** field of your API key
@@ -216,3 +216,11 @@ yarn dev
 ```
 
 Your app should be up and running on [http://localhost:3000](http://localhost:3000)!
+
+# Deploy
+
+Use the Deploy button below, to deploy the project on Heroku.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+**NOTE:** You'll have to configure the ***CONTENTFUL_SPACE_ID*** and ***CONTENTFUL_ACCESS_TOKEN*** values.
