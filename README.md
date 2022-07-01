@@ -221,6 +221,12 @@ Your app should be up and running on [http://localhost:3000](http://localhost:30
 
 Use the Deploy button below, to deploy the project on Heroku.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/contentful/starter-javascript-cookbook)
 
 **NOTE:** You'll have to configure the ***CONTENTFUL_SPACE_ID*** and ***CONTENTFUL_ACCESS_TOKEN*** values.
+
+# Learn more
+
+- [Getting Started with Contentful and JavaScript](https://www.contentful.com/developers/docs/javascript/tutorials/using-js-cda-sdk/)
+- [How to build a lightweight microblogging site with Contentful, vanilla HTML, CSS, and JavaScript](https://www.contentful.com/blog/2021/02/05/how-to-build-a-lightweight-blog/)
+- [JavaScript example apps](https://www.contentful.com/developers/docs/javascript/example-apps/)
